@@ -5,17 +5,8 @@ from tkinter import *
 import os
 import tkinter
 import os
+
 currdir = os.getcwd()
-""" def get_dir():
-    source_dir = fd.askdirectory(parent=root, initialdir=currdir, title='Please select a directory')
-    os.chdir(source_dir)
-    box1.config(state=NORMAL)
-    box1.delete(0, END)
-    box1.insert(0, source_dir)
-    box1.config(state=DISABLED)
-
-    return source_dir """
-
 
 # Main function, remove spaces
 def space_remover():
@@ -32,13 +23,6 @@ root.title("Space Remover")
 root.resizable(False, False)
 
 Label(root, text="Click the button below to \nremove spaces from whatever folder you wish!", font=('Ariel', 16)).pack()
-# Entry box to display selected directory
-""" pwd = StringVar(root, value=currdir)
-box1 = Entry(root, textvariable=pwd, font=('Ariel', 16))
-box1.config(state=DISABLED)
-box1.pack()
-
-dir_select = Button(root, text="Select Folder", command=get_dir).pack(padx=20, pady=20) """
 
 rmv_btn = Button(root, text="Remove Spaces!", command=space_remover).pack()
 
